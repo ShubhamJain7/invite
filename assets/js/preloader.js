@@ -1,4 +1,3 @@
-const heroImage = "/assets/hero-sm.png";
 const audio = document.getElementById("bg-music");
 const logo = document.getElementById("logo");
 const enterBtn = document.getElementById("enter");
@@ -51,15 +50,6 @@ let entered = false;
 function enter() {
     if (entered) return;
     entered = true;
-
-    // Ensure the page and scene are scrolled to the top BEFORE fading out
-    // try {
-    //     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-    //     document.documentElement.scrollTop = 0;
-    //     document.body.scrollTop = 0;
-    //     if (scene && typeof scene.scrollTo === 'function') scene.scrollTo(0, 0);
-    // } catch (e) { }
-
     preloader.classList.add("opacity-0");
 
     setTimeout(() => {
@@ -72,7 +62,8 @@ function enter() {
 }
 
 Promise.all([
-    waitForImage(heroImage),
+    waitForImage("./assets/hero.png"),
+    waitForImage("./assets/hero-sm.png"),
     waitForAudio(audio),
     document.fonts?.ready ?? Promise.resolve(),
 ]).then(() => {
