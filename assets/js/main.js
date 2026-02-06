@@ -1,5 +1,6 @@
 import "./preloader.js";
 import "./lanterns.js";
+// import "./lanterns.edit.js";
 import "./customization.js";
 import "./countdown.js";
 

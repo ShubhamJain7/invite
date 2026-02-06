@@ -7,7 +7,7 @@ const eventsItems = {
     "s": document.getElementById("sangeet"),
     "m": document.getElementById("mayra"),
     "r": document.getElementById("reception"),
-    "sh": document.getElementById("shaadi"),
+    "p": document.getElementById("phera"),
     "all": document.getElementById("all")
 }
 
