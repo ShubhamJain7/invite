@@ -69,8 +69,10 @@ Promise.all([
 ]).then(() => {
     preloader.classList.add("cursor-pointer");
     logo.classList.remove("animate-pulse");
-    enterBtn.classList.remove("hidden");
     scene.classList.remove("hidden");
+    enterBtn.classList.remove("animate-pulse")
+    enterBtn.classList.add("animate-bounce");
+    enterBtn.innerText = "Tap anywhere to enter";
 
     // Allow tapping anywhere on the preloader to proceed
     preloader.addEventListener("click", enter, { once: true });

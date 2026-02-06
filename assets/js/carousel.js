@@ -21,6 +21,6 @@ export function initCarousel() {
         images[currentIndex].classList.add('active');
     }
 
-    // Change image every 10 seconds
-    setInterval(showNextImage, 10000);
+    // Change image every 4 seconds
+    setInterval(showNextImage, 4000);
 }
