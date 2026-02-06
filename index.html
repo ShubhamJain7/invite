@@ -114,7 +114,7 @@
                 @apply text-white;
             }
             .reveal {
-                @apply opacity-0 translate-y-6 transition-all duration-750 ease-out;
+                @apply opacity-0 translate-y-6 transition-all duration-500 ease-out;
             }
             .reveal[data-visible="true"] {
                 @apply opacity-100 translate-y-0;
@@ -130,7 +130,7 @@
         <div class="text-5xl lg:text-9xl cormorant-upright-medium text-center">
             The beginning of forever
         </div>
-        <div id="enter" class="fixed bottom-0 cormorant-regular text-2xl mb-10 text-center">
+        <div id="enter" class="fixed bottom-0 cormorant-regular text-2xl mb-10 text-center hidden">
             <p>Tap anywhere to enter</p>
         </div>
 
@@ -169,11 +169,13 @@
         </div>
         <div class="flex flex-wrap gap-x-24 gap-y-20 text-center mt-24 mx-4 lg:mx-16 justify-center">
             <div id="kalash" class="flex flex-col items-center reveal">
-                <div class="relative w-fit">
-                    <img class="h-82 absolute top-30 left-16 md:left-24" src="./assets/kalash.png" />
-                    <img class="relative h-124 pointer-events-none" src="./assets/frame.png" />
-                    <img class="h-48 absolute -top-5 left-0" src="./assets/gold-leaf.png" />
-                    <img class="h-48 absolute -bottom-0 right-0 scale-x-[-1] scale-y-[-1]"
+                <div class="grid w-fit">
+                    <img class="col-start-1 row-start-1 h-80 justify-self-center self-center mt-20"
+                        src="./assets/kalash.png" />
+                    <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
+                        src="./assets/gold-leaf.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-end self-end scale-x-[-1] scale-y-[-1]"
                         src="./assets/gold-leaf.png" />
                 </div>
                 <p class="text-3xl mb-2">~ Kalash ~</p>
@@ -181,60 +183,75 @@
                 <p class="text-xl">9am onwards</p>
             </div>
             <div id="haldi" class="flex flex-col items-center reveal">
-                <div class="relative w-fit">
-                    <img class="h-82 absolute top-24 left-17 md:left-24" src="./assets/haldi.png" />
-                    <img class="relative h-124 pointer-events-none" src="./assets/frame.png" />
-                    <img class="h-48 absolute -top-4 left-0" src="./assets/gold-leaf.png" />
-                    <img class="h-48 absolute -bottom-0 right-0 scale-x-[-1] scale-y-[-1]"
+                <div class="grid w-fit">
+                    <img class="col-start-1 row-start-1 h-82 justify-self-center self-center mt-10"
+                        src="./assets/haldi.png" />
+                    <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-end self-end scale-x-[-1] scale-y-[-1]"
+                        src="./assets/gold-leaf.png" />
+
                 </div>
                 <p class="text-3xl mb-2">~ Haldi ~</p>
                 <p class="text-xl">Friday, March 6th</p>
                 <p class="text-xl">2pm onwards</p>
             </div>
             <div id="sangeet" class="flex flex-col items-center reveal">
-                <div class="relative w-fit">
-                    <img class="h-82 absolute top-24 left-17 md:left-24" src="./assets/sangeet.png" />
-                    <img class="relative h-124 pointer-events-none" src="./assets/frame.png" />
-                    <img class="h-48 absolute -top-4 left-0" src="./assets/gold-leaf.png" />
-                    <img class="h-48 absolute -bottom-0 right-0 scale-x-[-1] scale-y-[-1]"
+                <div class="grid w-fit">
+                    <img class="col-start-1 row-start-1 h-82 justify-self-center self-center mt-10"
+                        src="./assets/sangeet.png" />
+                    <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-end self-end scale-x-[-1] scale-y-[-1]"
+                        src="./assets/gold-leaf.png" />
+
                 </div>
                 <p class="text-3xl mb-2">~ Sangeet ~</p>
                 <p class="text-xl">Friday, March 6th</p>
                 <p class="text-xl">7pm onwards</p>
             </div>
             <div id="mayra" class="flex flex-col items-center reveal">
-                <div class="relative w-fit">
-                    <img class="h-82 absolute top-24 left-18 md:left-24" src="./assets/mayra.png" />
-                    <img class="relative h-124 pointer-events-none" src="./assets/frame.png" />
-                    <img class="h-48 absolute -top-4 left-0" src="./assets/gold-leaf.png" />
-                    <img class="h-48 absolute -bottom-0 right-0 scale-x-[-1] scale-y-[-1]"
+                <div class="grid w-fit">
+                    <img class="col-start-1 row-start-1 h-82 justify-self-center self-center"
+                        src="./assets/mayra.png" />
+                    <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-end self-end scale-x-[-1] scale-y-[-1]"
+                        src="./assets/gold-leaf.png" />
+
                 </div>
                 <p class="text-3xl mb-2">~ Mayra ~</p>
                 <p class="text-xl">Saturday, March 7th</p>
                 <p class="text-xl">10am onwards</p>
             </div>
             <div id="reception" class="flex flex-col items-center reveal">
-                <div class="relative w-fit">
-                    <img class="h-82 absolute top-20 left-18 md:left-24" src="./assets/receptioin.png" />
-                    <img class="relative h-124 pointer-events-none" src="./assets/frame.png" />
-                    <img class="h-48 absolute -top-4 left-0" src="./assets/gold-leaf.png" />
-                    <img class="h-48 absolute -bottom-0 right-0 scale-x-[-1] scale-y-[-1]"
+                <div class="grid w-fit">
+                    <img class="col-start-1 row-start-1 h-82 justify-self-center self-center"
+                        src="./assets/receptioin.png" />
+                    <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-end self-end scale-x-[-1] scale-y-[-1]"
+                        src="./assets/gold-leaf.png" />
+
                 </div>
                 <p class="text-3xl mb-2">~ Reception ~</p>
                 <p class="text-xl">Saturday, March 7th</p>
                 <p class="text-xl">8pm onwards</p>
             </div>
             <div id="phera" class="flex flex-col items-center reveal">
-                <div class="relative w-fit">
-                    <img class="h-80 absolute top-24 left-15 md:left-22" src="./assets/phera.png" />
-                    <img class="relative h-124 pointer-events-none" src="./assets/frame.png" />
-                    <img class="h-48 absolute -top-4 left-0" src="./assets/gold-leaf.png" />
-                    <img class="h-48 absolute -bottom-0 right-0 scale-x-[-1] scale-y-[-1]"
+                <div class="grid w-fit">
+                    <img class="col-start-1 row-start-1 h-80 justify-self-center self-center mt-10"
+                        src="./assets/phera.png" />
+                    <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-end self-end scale-x-[-1] scale-y-[-1]"
+                        src="./assets/gold-leaf.png" />
+
                 </div>
                 <p class="text-3xl mb-2">~ Phera ~</p>
                 <p class="text-xl">Sunday, March 8th</p>
@@ -244,10 +261,10 @@
         <hr class="w-10 mx-auto my-10" />
         <div id="venue"
             class="bg-[url(./assets/sun-bg.png)] bg-no-repeat bg-cover bg-center h-120 w-120 md:h-180 md:w-180 flex justify-center items-center flex-col overflow-hidden relative left-1/2 -translate-x-1/2">
-            <img src="./assets/pin.png" class="h-24" />
+            <img src="./assets/pin.png" class="h-32 ml-4" />
             <a href="https://maps.app.goo.gl/M9EXxT6y9Cz3nvZ8A" target="_blank" rel="noopener noreferrer"
                 class="text-center">
-                <p class="text-3xl">The Kings's Meadows</p>
+                <p class="text-3xl mt-2">The Kings's Meadows</p>
                 <p>Click to view map</p>
             </a>
         </div>

@@ -17,9 +17,9 @@ const observer = new IntersectionObserver(
             observer.unobserve(entry.target)
         })
     },
-    { threshold: 0.15 }
+    { threshold: 0.10 }
 )
 revealItems.forEach((el, i) => {
-    el.style.transitionDelay = `${i * 120}ms`
+    el.style.transitionDelay = `100ms`
     observer.observe(el)
 })
