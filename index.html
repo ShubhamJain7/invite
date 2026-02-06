@@ -107,6 +107,35 @@
             position: relative;
             z-index: 10;
         }
+
+        /* Carousel fade animation */
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .carousel-image {
+            animation: fadeOut 1s ease-in-out forwards;
+        }
+
+        .carousel-image.active {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
     </style>
     <style type="text/tailwindcss">
         @layer utilities {
@@ -171,7 +200,7 @@
             <div id="kalash" class="flex flex-col items-center reveal">
                 <div class="grid w-fit">
                     <img class="col-start-1 row-start-1 h-80 justify-self-center self-center mt-20"
-                        src="./assets/kalash.png" />
+                        src="./assets/events/kalash.png" />
                     <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
                     <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
@@ -185,7 +214,7 @@
             <div id="haldi" class="flex flex-col items-center reveal">
                 <div class="grid w-fit">
                     <img class="col-start-1 row-start-1 h-82 justify-self-center self-center mt-10"
-                        src="./assets/haldi.png" />
+                        src="./assets/events/haldi.png" />
                     <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
                     <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
@@ -200,7 +229,7 @@
             <div id="sangeet" class="flex flex-col items-center reveal">
                 <div class="grid w-fit">
                     <img class="col-start-1 row-start-1 h-82 justify-self-center self-center mt-10"
-                        src="./assets/sangeet.png" />
+                        src="./assets/events/sangeet.png" />
                     <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
                     <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
@@ -215,7 +244,7 @@
             <div id="mayra" class="flex flex-col items-center reveal">
                 <div class="grid w-fit">
                     <img class="col-start-1 row-start-1 h-82 justify-self-center self-center"
-                        src="./assets/mayra.png" />
+                        src="./assets/events/mayra.png" />
                     <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
                     <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
@@ -230,7 +259,7 @@
             <div id="reception" class="flex flex-col items-center reveal">
                 <div class="grid w-fit">
                     <img class="col-start-1 row-start-1 h-82 justify-self-center self-center"
-                        src="./assets/receptioin.png" />
+                        src="./assets/events/receptioin.png" />
                     <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
                     <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
@@ -245,7 +274,7 @@
             <div id="phera" class="flex flex-col items-center reveal">
                 <div class="grid w-fit">
                     <img class="col-start-1 row-start-1 h-80 justify-self-center self-center mt-10"
-                        src="./assets/phera.png" />
+                        src="./assets/events/phera.png" />
                     <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
                     <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
@@ -268,7 +297,29 @@
                 <p>Click to view map</p>
             </a>
         </div>
-        <hr class="w-10 mx-auto my-10" />
+        <div class="text-center mt-16 mb-12">
+            <p class="text-4xl lg:text-5xl cormorant-upright-regular reveal">Meet the Bride and Groom</p>
+        </div>
+        <div class="flex justify-center">
+            <div class="relative w-full lg:w-128 aspect-[546/820] overflow-hidden">
+                <div id="photo-carousel">
+                    <img src="./assets/images/1.webp"
+                        class="carousel-image active absolute top-[35%] left-[19%] w-[60%] h-[55%] object-cover"
+                        alt="Subject" />
+                    <img src="./assets/images/2.webp"
+                        class="carousel-image absolute top-[35%] left-[19%] w-[60%] h-[55%] object-cover"
+                        alt="Subject" />
+                    <img src="./assets/images/3.webp"
+                        class="carousel-image absolute top-[35%] left-[19%] w-[60%] h-[55%] object-cover"
+                        alt="Subject" />
+                    <img src="./assets/images/4.webp"
+                        class="carousel-image absolute top-[35%] left-[19%] w-[60%] h-[55%] object-cover"
+                        alt="Subject" />
+                </div>
+                <img src="./assets/photo-frame.png" class="absolute inset-0 z-10 pointer-events-none"
+                    alt="Ornate Frame" />
+            </div>
+        </div>
         <div id="countdown" class="cormorant-upright-regular text-center text-2xl lg:text-5xl mb-10">
             <p>The countdown begins!</p>
             <span id="days"></span> days
