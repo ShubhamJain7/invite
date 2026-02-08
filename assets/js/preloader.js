@@ -70,6 +70,8 @@ function waitForAudio(audioEl) {
     return new Promise(resolve => {
         if (audioEl.readyState >= 3) return resolve();
         audioEl.addEventListener("canplaythrough", resolve, { once: true });
+        audioEl.addEventListener("error", resolve, { once: true }); // fail-soft on audio error
+        setTimeout(resolve, 3000); // Safari autoplay restriction fallback - don't wait forever
     });
 }
 
