@@ -53,6 +53,10 @@ if (muteBtn && audio) {
 // Prevent page scrolling while preloader is visible
 document.body.classList.add("overflow-hidden");
 
+// Start message rotation immediately, independent of asset loading
+rotateMessages();
+messageInterval = setInterval(rotateMessages, 5000);
+
 function waitForImage(src) {
     return new Promise(resolve => {
         const img = new Image();
@@ -97,10 +101,6 @@ Promise.all([
     enterBtn.classList.remove("animate-pulse")
     enterBtn.classList.add("animate-bounce");
     enterBtn.innerText = "Tap anywhere to enter";
-
-    // Start rotating messages immediately
-    rotateMessages();
-    messageInterval = setInterval(rotateMessages, 5000);
 
     // Allow tapping anywhere on the preloader to proceed
     preloader.addEventListener("click", enter, { once: true });
