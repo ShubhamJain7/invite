@@ -6,6 +6,7 @@ const eventsItems = {
     "h": document.getElementById("haldi"),
     "s": document.getElementById("sangeet"),
     "m": document.getElementById("mayra"),
+    "b": document.getElementById("baraat"),
     "r": document.getElementById("reception"),
     "p": document.getElementById("phera"),
     "all": document.getElementById("all")

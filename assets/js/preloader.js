@@ -4,6 +4,29 @@ const enterBtn = document.getElementById("enter");
 const preloader = document.getElementById("preloader");
 const scene = document.getElementById("scene");
 const muteBtn = document.getElementById("mute-btn");
+const preloaderMessage = document.getElementById("preloader-message");
+
+// Messages to loop through
+const messages = [
+    "Stuck together (happily)",
+    "A lifetime in the making",
+    "Found my co-founder",
+    "The beginning of forever",
+];
+
+let messageIndex = 0;
+let messageInterval;
+
+function rotateMessages() {
+    messageIndex = (messageIndex + 1) % messages.length;
+    if (preloaderMessage) {
+        preloaderMessage.style.opacity = "0";
+        setTimeout(() => {
+            preloaderMessage.textContent = messages[messageIndex];
+            preloaderMessage.style.opacity = "1";
+        }, 500);
+    }
+}
 
 // Set default volume to 75%
 if (audio) {
@@ -50,6 +73,7 @@ let entered = false;
 function enter() {
     if (entered) return;
     entered = true;
+    clearInterval(messageInterval);
     preloader.classList.add("opacity-0");
 
     setTimeout(() => {
@@ -73,6 +97,10 @@ Promise.all([
     enterBtn.classList.remove("animate-pulse")
     enterBtn.classList.add("animate-bounce");
     enterBtn.innerText = "Tap anywhere to enter";
+
+    // Start rotating messages immediately
+    rotateMessages();
+    messageInterval = setInterval(rotateMessages, 5000);
 
     // Allow tapping anywhere on the preloader to proceed
     preloader.addEventListener("click", enter, { once: true });

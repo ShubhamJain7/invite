@@ -156,8 +156,8 @@
     <div id="preloader"
         class="fixed inset-0 z-50 flex flex-col items-center bg-cover bg-[url(./assets/preloader.webp)] text-black transition-opacity ease-in-out duration-2000 container mx-auto">
         <img id="logo" src="./assets/logo-dark.png" class="animate-pulse" />
-        <div class="text-5xl lg:text-9xl cormorant-upright-medium text-center">
-            The beginning of forever
+        <div id="preloader-message"
+            class="text-5xl lg:text-9xl cormorant-upright-medium text-center transition-opacity duration-1000">
         </div>
         <div id="enter" class="fixed bottom-0 cormorant-regular text-2xl mb-10 text-center animate-pulse">
             <p>Loading...</p>
@@ -166,7 +166,7 @@
     <div id="scene"
         class="hidden relative overflow-hidden bg-cover bg-top min-h-[200vh] bg-[url(./assets/hero-sm.png)] md:bg-[url(./assets/hero.png)] cormorant-regular">
         <div id="lantern-layer" class="pointer-events-none absolute inset-0"></div>
-        <div class="text-center mt-40 lg:mt-24 min-h-[1700px] lg:min-h-[1800px] reveal">
+        <div class="text-center mt-40 lg:mt-24 min-h-[1900px] lg:min-h-[2100px] reveal">
             <p class="text-7xl lg:text-9xl">Shubham</p>
             <p class="text-2xl lg:text-4xl tracking-widest">WEDS</p>
             <p class="text-7xl lg:text-9xl">Muskaan</p>
@@ -190,7 +190,7 @@
             </div>
             <div class="mt-10 reveal">
                 <p class="text-7xl cormorant-regular">INVITE</p>
-                <p class="text-xl lg:text-3xl cormorant-regular">You to join in our wedding celebrations</p>
+                <p class="text-xl lg:text-3xl cormorant-regular">You to join our wedding celebrations</p>
                 <p class="text-xl lg:text-3xl cormorant-regular">for the following events</p>
             </div>
         </div>
@@ -198,7 +198,7 @@
             <div id="kalash" class="flex flex-col items-center reveal">
                 <div class="grid w-fit">
                     <img class="col-start-1 row-start-1 h-80 justify-self-center self-center mt-20"
-                        src="./assets/events/kalash.png" />
+                        src="./assets/events/kalash.jpg" />
                     <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
                     <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
@@ -207,12 +207,12 @@
                 </div>
                 <p class="text-4xl mb-2">~ Kalash ~</p>
                 <p class="text-2xl">Friday, March 6th</p>
-                <p class="text-2xl">8am onwards</p>
+                <p class="text-2xl">8 am onwards</p>
             </div>
             <div id="haldi" class="flex flex-col items-center reveal">
                 <div class="grid w-fit">
                     <img class="col-start-1 row-start-1 h-82 justify-self-center self-center mt-10"
-                        src="./assets/events/haldi.png" />
+                        src="./assets/events/haldi.jpg" />
                     <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
                     <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
@@ -221,7 +221,7 @@
                 </div>
                 <p class="text-4xl mb-2">~ Haldi ~</p>
                 <p class="text-2xl">Friday, March 6th</p>
-                <p class="text-2xl">11am onwards</p>
+                <p class="text-2xl">11 am onwards</p>
             </div>
             <div id="sangeet" class="flex flex-col items-center reveal">
                 <div class="grid w-fit">
@@ -235,12 +235,12 @@
                 </div>
                 <p class="text-4xl mb-2">~ Sangeet ~</p>
                 <p class="text-2xl">Friday, March 6th</p>
-                <p class="text-2xl">7pm onwards</p>
+                <p class="text-2xl">7 pm onwards</p>
             </div>
             <div id="mayra" class="flex flex-col items-center reveal">
                 <div class="grid w-fit">
                     <img class="col-start-1 row-start-1 h-82 justify-self-center self-center"
-                        src="./assets/events/mayra.png" />
+                        src="./assets/events/mayra.jpg" />
                     <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
                     <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
                         src="./assets/gold-leaf.png" />
@@ -249,7 +249,21 @@
                 </div>
                 <p class="text-4xl mb-2">~ Mayra ~</p>
                 <p class="text-2xl">Saturday, March 7th</p>
-                <p class="text-2xl">10am onwards</p>
+                <p class="text-2xl">10 am onwards</p>
+            </div>
+            <div id="baraat" class="flex flex-col items-center reveal">
+                <div class="grid w-fit">
+                    <img class="col-start-1 row-start-1 h-82 justify-self-center self-center"
+                        src="./assets/events/baraat.jpg" />
+                    <img class="col-start-1 row-start-1 h-124 pointer-events-none" src="./assets/frame.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-start self-start"
+                        src="./assets/gold-leaf.png" />
+                    <img class="col-start-1 row-start-1 h-48 justify-self-end self-end scale-x-[-1] scale-y-[-1]"
+                        src="./assets/gold-leaf.png" />
+                </div>
+                <p class="text-4xl mb-2">~ Baraat ~</p>
+                <p class="text-2xl">Saturday, March 7th</p>
+                <p class="text-2xl">4 pm onwards</p>
             </div>
             <div id="reception" class="flex flex-col items-center reveal">
                 <div class="grid w-fit">
@@ -263,7 +277,7 @@
                 </div>
                 <p class="text-4xl mb-2">~ Reception ~</p>
                 <p class="text-2xl">Saturday, March 7th</p>
-                <p class="text-2xl">8pm onwards</p>
+                <p class="text-2xl">7 pm onwards</p>
             </div>
             <div id="phera" class="flex flex-col items-center reveal">
                 <div class="grid w-fit">
@@ -277,7 +291,7 @@
                 </div>
                 <p class="text-4xl mb-2">~ Phera ~</p>
                 <p class="text-2xl">Sunday, March 8th</p>
-                <p class="text-2xl">8am onwards</p>
+                <p class="text-2xl">8 am onwards</p>
             </div>
         </div>
         <hr class="w-10 mx-auto my-10" />
